@@ -6,7 +6,7 @@
 
 ## Usecase to solve actual problem
 
-The following command runs an ubuntu container, attaches interactively to your local command-line session, and runs /bin/bash.
+The following command runs an `ubuntu` container, attaches interactively to your local command-line session, and runs `/bin/bash`.
 
 ```bash
 ❯  docker run -i -t ubuntu /bin/bash
