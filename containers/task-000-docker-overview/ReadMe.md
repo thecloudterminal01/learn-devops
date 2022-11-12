@@ -13,6 +13,12 @@ The following command runs an `ubuntu` container, attaches interactively to your
 
 
 ```bash
+
+# run : Run a command in a new container
+# -i : interactively
+# -t : attached to your terminal
+# ubuntu : is the image we will be downloading
+# /bin/bash : the command that will run inside the container started with ubuntu image
 ❯  docker run -i -t ubuntu /bin/bash
 
 root@f3d2356faadc:/# ls
