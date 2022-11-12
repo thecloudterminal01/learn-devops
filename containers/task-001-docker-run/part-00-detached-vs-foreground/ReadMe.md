@@ -1,7 +1,10 @@
 ## Detached vs Foreground
 
+- [docs.docker.com/engine/reference/run](https://docs.docker.com/engine/reference/run)
+
 By design, containers started in detached mode exit when the root process used to run the container exits
 
+- [docs.docker.com/engine/reference/commandline/run](https://docs.docker.com/engine/reference/commandline/run)
 
 ### Detached Mode
 
