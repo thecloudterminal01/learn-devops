@@ -6,11 +6,17 @@
 
 
 ```bash
-docker run --name test -it debian
+# allocate pseudo tty : -it
+# --name for container name
+❯ docker run --name test -it debian
 
 root@d6c0fe130dba:/# exit 13
-echo $?
+
+# Note the exit code is passed to the caller of docker run.
+❯ echo $?                                                                                               
 13
-docker ps -a | grep test
-d6c0fe130dba        debian:7            "/bin/bash"         26 seconds ago      Exited (13) 17 seconds ago                         test
+❯ docker ps -a                                                          
+CONTAINER ID   IMAGE     COMMAND   CREATED              STATUS                       PORTS     NAMES
+4a94928d6520   debian    "bash"    About a minute ago   Exited (13) 54 seconds ago             test
 ```
+
