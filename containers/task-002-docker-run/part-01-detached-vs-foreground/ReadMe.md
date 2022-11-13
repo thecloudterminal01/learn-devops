@@ -4,6 +4,12 @@
 
 - [docs.docker.com/engine/reference/commandline/run](https://docs.docker.com/engine/reference/commandline/run)
 
+Version Stack
+
+| Stack  | Version  |
+|--------|----------|
+| Docker | 20.10.14 |
+
 By design, containers started in detached mode exit when the root process used to run the container exits
 
 

@@ -3,6 +3,12 @@
 
 [docs.docker.com/get-started/overview](https://docs.docker.com/get-started/overview)
 
+Version Stack
+
+| Stack  | Version  |
+|--------|----------|
+| Docker | 20.10.14 |
+
 
 ## Usecase to solve actual problem
 
@@ -13,6 +19,9 @@ The following command runs an `ubuntu` container, attaches interactively to your
 
 
 ```bash
+# Version
+❯ docker -v               
+Docker version 20.10.14, build a224086
 
 # run : Run a command in a new container
 # -i : interactively

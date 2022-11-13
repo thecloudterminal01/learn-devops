@@ -2,6 +2,13 @@
 
 [assign-name-and-allocate-pseudo-tty---name--it](https://docs.docker.com/engine/reference/commandline/run/#assign-name-and-allocate-pseudo-tty---name--it)
 
+Version Stack
+
+| Stack  | Version  |
+|--------|----------|
+| Docker | 20.10.14 |
+
+
 - Let's begin
 
 
