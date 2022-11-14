@@ -23,6 +23,8 @@ CONTAINER ID   IMAGE          COMMAND   CREATED         STATUS         PORTS    
 
 ### PID
 
+[pid-settings---pid](https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+
 Let's create two containers a1 and a2, and we want container a2 to be able to see the processes running in container a1
 
 ```bash
