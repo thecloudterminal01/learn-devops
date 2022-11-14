@@ -1,5 +1,12 @@
 ## Setting PID and choosing image with Specific Tag
 
+Version Stack
+
+| Stack  | Version  |
+|--------|----------|
+| Docker | 20.10.14 |
+
+
 ### ImageTag
 
 [imagetag](https://docs.docker.com/engine/reference/run/#imagetag)
