@@ -16,27 +16,44 @@ CONTAINER ID   IMAGE          COMMAND   CREATED         STATUS         PORTS    
 
 ### PID
 
-Let's create two containers a1 and b1, and we want container b1 to be able to see the processes running in container a1
+Let's create two containers a1 and a2, and we want container a2 to be able to see the processes running in container a1
 
 ```bash
 # Terminal session 1
 ❯ docker run --rm --name=a1 -it ubuntu /bin/bash
-root@9e16886f2f3a:/# sleep 1000
-
+root@fefc7f52750f:/# sleep 10000
 
 
 
 # Terminal session 2
-❯ docker ps -a                              
+❯ docker ps -a                                  
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
-9e16886f2f3a   ubuntu    "/bin/bash"   50 seconds ago   Up 50 seconds             a1
+fefc7f52750f   ubuntu    "/bin/bash"   33 seconds ago   Up 32 seconds             a1
 
-# Note that b1 cannot see the processes running inside of a1 yet.
+
+# Note that a2 cannot see the processes running inside of a1 yet.
 ❯ docker run --rm --name=a2 -it ubuntu /bin/bash
-root@b87501f4c17f:/# ps -ef
+root@9630d2dd813f:/# ps -ef 
 UID        PID  PPID  C STIME TTY          TIME CMD
-root         1     0  0 12:30 pts/0    00:00:00 /bin/bash
-root         9     1  0 12:30 pts/0    00:00:00 ps -ef
-root@b87501f4c17f:/# 
+root         1     0  0 10:34 pts/0    00:00:00 /bin/bash
+root         9     1  0 10:34 pts/0    00:00:00 ps -ef
+root@9630d2dd813f:/# #let's exit
+root@9630d2dd813f:/# exit
+exit
+
+❯ docker ps -a                                  
+CONTAINER ID   IMAGE     COMMAND       CREATED              STATUS              PORTS     NAMES
+fefc7f52750f   ubuntu    "/bin/bash"   About a minute ago   Up About a minute             a1
+
+
+# Now let's start the second container a2 using pid=container:a1
+# Note that now it's able to see the process sleep running in a1
+❯ docker run --rm --name=a2 --pid=container:a1 -it ubuntu /bin/bash
+root@0bfaed14e83d:/# ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 10:33 pts/0    00:00:00 /bin/bash
+root        10     1  0 10:33 pts/0    00:00:00 sleep 10000
+root        11     0  0 10:35 pts/0    00:00:00 /bin/bash
+root        20    11  0 10:35 pts/0    00:00:00 ps -ef
 
 ```
