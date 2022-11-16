@@ -46,3 +46,15 @@ PING docker (93.184.216.34): 56 data bytes
 
 [specify-hard-limits-on-memory-available-to-containers--m---memory](https://docs.docker.com/engine/reference/commandline/run/#specify-hard-limits-on-memory-available-to-containers--m---memory)
 
+```bash
+❯ docker run --rm -it --memory="1g" ubuntu                              
+root@a2d0cf9562af:/# cat /sys/fs/cgroup/memory.max
+1073741824
+root@a2d0cf9562af:/# exit
+exit
+
+❯ docker run --rm -it --memory="2g" ubuntu
+root@1195935b38e0:/# cat /sys/fs/cgroup/memory.max
+2147483648
+root@1195935b38e0:/# 
+```
