@@ -49,6 +49,8 @@ See 'docker run --help
 
 ## Environment 
 
+[set-environment-variables--e---env---env-file](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)
+
 ```bash
 # Let's create a file
 ❯ echo "VAR3=value" > .env                                                                              
