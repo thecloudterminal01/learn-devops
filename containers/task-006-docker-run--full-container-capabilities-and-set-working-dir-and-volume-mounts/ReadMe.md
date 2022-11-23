@@ -38,7 +38,7 @@ tmpfs            64M     0   64M   0% /dev
 
 ### Mount Volumes
 
-[mount-volume--v---read-only](https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only)
+[mount-volume](https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only)
 
 ```bash
 ## Terminal session 1
@@ -52,7 +52,7 @@ ReadMe.md
 ## Terminal session 2
 # Let's create another directory and see
 ❯ mkdir -p /tmp/test
-❯ cd test
+❯ cd /tmp/test
 ❯ touch test.txt
 
 
