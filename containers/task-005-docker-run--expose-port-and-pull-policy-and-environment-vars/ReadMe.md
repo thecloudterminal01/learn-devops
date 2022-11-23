@@ -37,12 +37,18 @@ You can visit the same in browser
 [set-the-pull-policy---pull](https://docs.docker.com/engine/reference/commandline/run/#-set-the-pull-policy---pull)
 
 ```bash
-❯ docker run --pull=never hello-world
-docker: Error response from daemon: No such image: hello-world:latest.
-See 'docker run --help
+❯ docker pull ubuntu            
+❯ docker images | grep ubuntu             
+ubuntu       latest    3c2df5585507   2 weeks ago   69.2MB
+
+❯ docker rmi ubuntu                  
+
+
+❯ docker run --pull=never ubuntu     
+docker: Error response from daemon: No such image: ubuntu:latest.
 
 # As there is no image with this tag locally
-❯ docker images | grep hello-world | wc -l
+❯ docker images | grep ubuntu | wc -l
        0
 ```
 
