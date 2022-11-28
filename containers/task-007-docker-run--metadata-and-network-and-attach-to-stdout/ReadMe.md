@@ -63,7 +63,7 @@ PING a1 (172.18.0.2): 56 data bytes
 
 [attach-to-stdinstdoutstderr--a](https://docs.docker.com/engine/reference/commandline/run/#attach-to-stdinstdoutstderr--a)
 
-Let's do an example of attaching to stdout
+Let's do an example of attaching to container's stdout
 
 
 ```bash
