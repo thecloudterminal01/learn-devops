@@ -1,10 +1,16 @@
 # Get Familiar With Console, Projects, Roles And Permissions, APIs And Services
 
 
+RECOMMENDED TO VISIT
 
-[cloudskillsboost.google - A Tour of Google Cloud Hands-on Labs](https://www.cloudskillsboost.google/focuses/2794?parent=catalog)
+[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
+
+[Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
+
+> Task : Searching through the available products and services
 
 ## Project
+
 
 - A Google Cloud [project](https://cloud.google.com/docs/overview/#projects) is an organizing entity for your Google Cloud resources. It often contains resources and services.
 - Your project has a name, number, and ID
@@ -14,6 +20,7 @@
 ## Roles and permissions
 
 [IAM Overview](https://cloud.google.com/iam/docs/overview)
+[course_sessions/2028816/video/343130](https://www.cloudskillsboost.google/course_sessions/2028816/video/343130)
 
 - Google Cloud also contains a collection of permissions and roles that define who has access to what resources
 - You can use the [CloudIAM](https://cloud.google.com/iam/) console for the same.
