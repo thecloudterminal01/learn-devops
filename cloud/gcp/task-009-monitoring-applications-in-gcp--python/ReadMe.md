@@ -1,10 +1,17 @@
 # Monitoring Applications in GCP
 
+[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
+
+[Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
+
 ## Objective
 
 - Deploy and test the python app locally on gcp console 
 - Deploy an application to App Engine and examine the Cloud logs
-- 
+- View the Profiler Information
+- Explore Cloud Trace
+- Monitor resources using Dashboards
+- Create uptime checks and alerts
 
 ### Deploy and test the python app locally on gcp console
 
@@ -96,6 +103,8 @@ nohup ab -n 1000 -c 10 https://<your-project-id>.appspot.com/ > nohup6.out &
 - Click on `Create Dashboard`
 
 ### Create uptime checks and alerts
+
+- Select `Uptime Checks`
 
 | Property                | Value                         |
 |-------------------------|-------------------------------|

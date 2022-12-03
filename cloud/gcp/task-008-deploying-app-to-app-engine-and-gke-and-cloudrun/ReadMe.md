@@ -1,5 +1,9 @@
 # Deploying same Python app to AppEngine, GKE, CloudRun
 
+[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
+
+[Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
+
 ## Objective
 
 ![img.png](.images/arch-objective.png)
