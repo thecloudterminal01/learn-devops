@@ -9,6 +9,8 @@
 - Run the app locally on gcp console
 - Deploy to App Engine
 - Examine the App Engine Logs
+- Create an App Engine latency alert
+- Creating an Alerting Policy with the CLI
 
 
 
