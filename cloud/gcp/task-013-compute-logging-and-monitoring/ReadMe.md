@@ -70,7 +70,7 @@ Create GKE Cluster
 - Name : `gke-cluster`
 
 
-### Install and use the logging and monitoring agents for Compute Engine
+### Use the logging and monitoring agents for Compute Engine
 
 - Monitoring > Metrics Explorer
 - Resource & Metric : VM Instance > Instance > CPU utilization
