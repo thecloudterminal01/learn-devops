@@ -29,6 +29,15 @@ PING myhost (142.250.181.78): 56 data bytes
 [specify-hard-limits-on-memory-available-to-containers--m---memory](https://docs.docker.com/engine/reference/commandline/run/#specify-hard-limits-on-memory-available-to-containers--m---memory)
 
 ```bash
+## Terminal session 1
+❯ docker run --rm -it  ubuntu             
+
+## Terminal session 2
+❯ docker stats
+
+## Terminal session 1
 ❯ docker run --rm -it --memory="2g" ubuntu
 
+## Terminal session 2
+❯ docker stats
 ```
