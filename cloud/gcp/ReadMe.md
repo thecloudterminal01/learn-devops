@@ -1,4 +1,6 @@
-# 
+# GCP Tasks
+
+- []()
 
 [docs/regions-zones](https://cloud.google.com/compute/docs/regions-zones)
 [https://cloud.google.com/about/locations](https://cloud.google.com/about/locations)
