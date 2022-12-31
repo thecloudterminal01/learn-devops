@@ -1,5 +1,8 @@
 # Deploying Google Kubernetes Engine
 
+[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
+
+[Select - Getting Started with Google Kubernetes Engine Course](https://www.cloudskillsboost.google)
 
 ## High Level Objectives
 
