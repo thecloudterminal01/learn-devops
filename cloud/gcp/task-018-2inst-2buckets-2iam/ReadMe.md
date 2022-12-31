@@ -16,7 +16,7 @@
 - On the Grant this service account access to project page, specify the role as `Basic > Editor`.
 - Manage keys - Download JSON key
 
-### Task 2. Explore Cloud Shell
+### Explore Cloud Shell
 
 - Use Cloud Shell to set up the environment variables for this task
 
