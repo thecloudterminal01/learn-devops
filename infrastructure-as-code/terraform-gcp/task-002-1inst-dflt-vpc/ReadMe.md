@@ -8,9 +8,9 @@
 
 **Version Stack**
 
-| Stack     | Version  |
-|-----------|----------|
-| Terraform | 1.3.4    |
+| Stack     | Version |
+|-----------|---------|
+| Terraform | 1.3.6   |
 
 ## High Level Objectives
 
