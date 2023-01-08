@@ -103,9 +103,6 @@ cat /var/www/html/index.html
 
 ```bash
 kubectl delete pod pvc-demo-pod
-
-kubectl delete pod pvc-demo-pod
-
 ```
 
 - To create the StatefulSet with the volume, execute the following command:
