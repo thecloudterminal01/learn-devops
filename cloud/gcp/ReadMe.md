@@ -28,6 +28,8 @@
 
 
 
+
+
 [docs/regions-zones](https://cloud.google.com/compute/docs/regions-zones)
 [https://cloud.google.com/about/locations](https://cloud.google.com/about/locations)
 
@@ -36,6 +38,10 @@
 [docs/grant-role-console](https://cloud.google.com/iam/docs/grant-role-console)
 
 [shell/docs](https://cloud.google.com/shell/docs)
+
+[architecture/identity](https://cloud.google.com/architecture/identity)
+
+[docs/cloud-platform-resource-hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy)
 
 [https://cloud.google.com/products/calculator](https://cloud.google.com/products/calculator)
 
