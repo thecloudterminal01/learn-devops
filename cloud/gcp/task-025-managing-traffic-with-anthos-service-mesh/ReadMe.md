@@ -77,7 +77,8 @@ kubectl label namespace ingress \
   --overwrite
 ```
 
-- Download and apply the gateway configuration files. These include the pods and services that will first receive the incoming requests from outside the cluster:
+- Download and apply the gateway configuration files. 
+- These include the pods and services that will first receive the incoming requests from outside the cluster:
 
 ```bash
 git clone https://github.com/GoogleCloudPlatform/anthos-service-mesh-packages
@@ -89,6 +90,7 @@ kubectl apply -n ingress -f anthos-service-mesh-packages/samples/gateways/istio-
 ```bash
 kubectl get pod,service -n ingress
 
+# Notice the resource is a LoadBalancer. This ingress gateway uses an external TCP load balancer in GCP.
 ```
 
 - Deploy the Gateway to specify the port and protocol to be used. In this case, the gateway enables HTTP traffic over port 80:
@@ -146,6 +148,15 @@ spec:
           number: 9080
 EOF
 ```
+
+
+> In Istio, when an incoming request arrives at a Kubernetes cluster, it first reaches the Gateway resource, 
+> and then the VirtualService resource. The Gateway resource receives the incoming traffic and is responsible 
+> for routing the traffic to the correct VirtualService based on the specified rules. The VirtualService resource 
+> then applies additional routing rules to further direct the traffic to the appropriate destination service or pod. 
+> So in the example manifest, the incoming traffic will first reach the bookinfo-gateway Gateway resource and then 
+> it will be directed to the bookinfo VirtualService based on the specified matching rules. The VirtualService 
+> will then route the traffic to the appropriate destination based on the defined routing rules.
 
 - Verify that the Gateway and VirtualService have been created and notice that the VirtualService is pointing to the Gateway:
 
