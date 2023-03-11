@@ -23,7 +23,8 @@
 - [task-021 : creating google kubernetes engine deployments](task-021-creating-google-kubernetes-engine-deployments)
 - [task-022 : configuring persistent storage for google kubernetes engine](task-022-configuring-persistent-storage-for-google-kubernetes-engine)
 - [task-023 : anthos service mesh walkthrough](task-023-anthos-service-mesh-walkthrough)
-
+- [task-024 : observing anthos services](task-024-observing-anthos-services)
+- [task-025 : managing traffic with anthos service mesh](task-025-managing-traffic-with-anthos-service-mesh)
 
 
 

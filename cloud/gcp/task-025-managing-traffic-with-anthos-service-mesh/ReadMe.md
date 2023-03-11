@@ -6,6 +6,15 @@
 
 [Select - Cloud Operations and Service Mesh with Anthos Course](https://www.cloudskillsboost.google)
 
+High Level Objectives
+
+- Configure and use Istio Gateways
+- Apply default destination rules, for all available versions
+- Apply virtual services to route by default to only one version
+- Route to a specific version of a service based on user identity
+- Shift traffic gradually from one version of a microservice to another
+- Use the Anthos Service Mesh dashboard to view routing to multiple versions
+- Setup networking best practices such as retries, circuit breakers and timeouts
 
 
 Anthos Service Mesh’s traffic management model relies on the following two components:
@@ -17,7 +26,18 @@ Anthos Service Mesh’s traffic management model relies on the following two com
 
 ## Review Traffic Management use cases
 
-- Route traffic to multiple versions of a service.
+> In Istio, when an incoming request arrives at a Kubernetes cluster, it first reaches the Gateway resource,
+> and then the VirtualService resource. The Gateway resource receives the incoming traffic and is responsible
+> for routing the traffic to the correct VirtualService based on the specified rules. The VirtualService resource
+> then applies additional routing rules to further direct the traffic to the appropriate destination service or pod.
+
+- Example: traffic splitting
+- Example: timeouts
+- Example: retries
+- Example: fault injection: inserting delays
+- Example: fault injection: inserting aborts
+- Example: conditional routing: based on request headers
+
 
 ## Setup
 
@@ -470,7 +490,7 @@ kubectl delete -f https://raw.githubusercontent.com/istio/istio/master/samples/b
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/master/samples/bookinfo/networking/virtual-service-all-v1.yaml
 ```
 
-- Create a destination rule to apply circuit breaking seetings when calling the productpage service:
+- Create a destination rule to apply circuit breaking settings when calling the productpage service:
 
 ```bash
 kubectl apply -f - <<EOF

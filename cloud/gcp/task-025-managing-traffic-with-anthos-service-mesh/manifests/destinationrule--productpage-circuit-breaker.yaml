@@ -1,3 +1,7 @@
+# DestinationRule is an Istio resource that defines policies to apply to traffic intended
+# for a specific service instance. It is used to configure traffic management features such
+# as load balancing, circuit breaking, and fault injection.
+
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
