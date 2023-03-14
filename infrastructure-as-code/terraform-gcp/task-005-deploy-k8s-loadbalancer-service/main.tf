@@ -10,7 +10,7 @@ variable "location" {
   description = "Location represents region/zone for the resource."
 }
 
-variable "network_name" {
+variable  "network_name" {
   default = "tf-gke-k8s"
 }
 
