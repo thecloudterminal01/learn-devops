@@ -2,8 +2,7 @@
 
 HIGH LEVEL OBJECTIVES 
 - Running nginx on local using docker run
-- Exploring the config file /etc/nginx/conf.d/default.conf
-- Exploring the file /usr/share/nginx/html index.html and 50x.html
+- Exploring files /etc/nginx/conf.d/default.conf,/usr/share/nginx/html index.html and 50x.html
 - Copy the files to local directory
 
 ### Running nginx using docker and access on port 80 of host
