@@ -1,6 +1,5 @@
 # Nginx Tasks
 
-# terraform-kitchen
 
 
 
