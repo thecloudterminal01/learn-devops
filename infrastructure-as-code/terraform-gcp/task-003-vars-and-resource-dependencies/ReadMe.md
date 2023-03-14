@@ -4,12 +4,19 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-High Level Objectives
+**High Level Objectives**
 
 - Use variables and output values
 - Observe implicit dependency
 - Create explicit resource dependency
 - View Dependency Graph
+
+**Keywords**
+
+- variables
+- output values
+- explicit resource dependency
+- dependency graph
 
 **Version Stack**
 

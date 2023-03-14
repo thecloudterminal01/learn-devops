@@ -6,7 +6,7 @@
 - Attached Internet Gateway 
 - Instances in 2 regions with subnets created using auto-mode
 
-**Stack**
+**Keywords**
 - VPC
 - Internet Gateway
 - 2 instances

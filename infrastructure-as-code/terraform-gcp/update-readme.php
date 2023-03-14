@@ -1,23 +1,38 @@
 <?php
+// Define the header row of the table
+$header_row = "| S.No | Stack | Tasks | High Level Objective |\n|------|-------|-------|----------------------|";
 
-$dirs = glob('task-*', GLOB_ONLYDIR);
+// Initialize an empty array to store the rows of the table
+$rows = array();
 
-$objectives = array();
+// Loop through all the task-* folders
+foreach (glob("task-*") as $task_folder) {
+    // Read the contents of the ReadMe.md file
+    $file_contents = file_get_contents("$task_folder/ReadMe.md");
 
-foreach ($dirs as $dir) {
-    $readme_file = $dir . '/ReadMe.md';
+    // Extract the high level objectives using a regular expression
+    $pattern = '/\*\*High Level Objectives\*\*(.*?)\*\*Keywords\*\*/s';
+    preg_match($pattern, $file_contents, $matches);
+    $lines_between_patterns = explode("\n", $matches[1]);
 
-    if (file_exists($readme_file)) {
-        $file_contents = file_get_contents($readme_file);
-        $pattern = '/High Level Objectives(.*?)Version Stack/s';
-        preg_match($pattern, $file_contents, $matches);
+    // Store the high level objectives as a list item
+    $high_level_objective = implode("<br>", $lines_between_patterns);
 
-        $lines_between_patterns = explode("\n", $matches[1]);
+    // Get the task name from the folder name
+    $task_name = basename($task_folder);
 
-        $objectives[$dir] = $lines_between_patterns;
-    }
+    // Create a row of the table
+    $row = "| ? | ? | [$task_name]($task_folder) | $high_level_objective |";
+
+    // Add the row to the array of rows
+    array_push($rows, $row);
 }
 
-print_r($objectives);
+// Combine the header row and the rows array into a single string
+$table = $header_row . "\n" . implode("\n", $rows);
+
+// Print the table
+echo $table;
+file_put_contents("ReadMe.md", $table);
 
 ?>
