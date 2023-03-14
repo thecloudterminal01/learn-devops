@@ -5,11 +5,15 @@
 
 [Select - Quest -  Managing Cloud Infrastructure with Terraform](https://www.cloudskillsboost.google/paths)
 
-High Level Objectives
+**High Level Objectives**
 
 - Deploy a Kubernetes cluster along with a service using Terraform
 
+**Version Stack**
 
+| Stack     | Version |
+|-----------|---------|
+| Terraform | 1.3.9   |
 
 ## Clone the sample code
 

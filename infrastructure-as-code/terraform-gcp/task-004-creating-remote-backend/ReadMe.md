@@ -4,6 +4,11 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
+**High Level Objectives**
+
+- Create a local backend.
+- Create a Cloud Storage backend.
+- Refresh your Terraform state.
 
 **Version Stack**
 
@@ -12,11 +17,7 @@
 | Terraform | 1.3.6   |
 
 
-## High Level Objectives
 
-- Create a local backend.
-- Create a Cloud Storage backend.
-- Refresh your Terraform state.
 
 ### Verify Terraform is installed
 

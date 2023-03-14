@@ -6,17 +6,19 @@
 
 [Select - Getting Started with Terraform for Google Cloud](https://www.cloudskillsboost.google/paths)
 
+**High Level Objectives**
+
+- Verify Terraform installation
+- Define Google Cloud as the provider
+- Create, change, and destroy Google Cloud resources by using Terraform
+
 **Version Stack**
 
 | Stack     | Version |
 |-----------|---------|
 | Terraform | 1.3.6   |
 
-## High Level Objectives
 
-- Verify Terraform installation
-- Define Google Cloud as the provider
-- Create, change, and destroy Google Cloud resources by using Terraform
 
 ### Check Terraform Installation
 

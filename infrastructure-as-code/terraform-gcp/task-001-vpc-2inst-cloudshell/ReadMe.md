@@ -1,11 +1,16 @@
 # Using Terraform in GCP console
 
-## Objectives
+**High Level Objectives**
 
-We should have 
-1) VPC network
-2) Attached Internet Gateway
-3) Instances in 2 regions with subnets created using auto-mode
+- Create a VPC network
+- Attached Internet Gateway 
+- Instances in 2 regions with subnets created using auto-mode
+
+**Stack**
+- VPC
+- Internet Gateway
+- 2 instances
+- subnets using auto-mode
 
 **Version Stack**
 

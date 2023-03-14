@@ -4,6 +4,15 @@
 
 [Select - Quest -  Managing Cloud Infrastructure with Terraform](https://www.cloudskillsboost.google/paths)
 
+**High Level Objectives**
+
+- 
+
+**Version Stack**
+
+| Stack     | Version |
+|-----------|---------|
+| Terraform | 1.3.9   |
 
 ## Clone the examples repository
 
