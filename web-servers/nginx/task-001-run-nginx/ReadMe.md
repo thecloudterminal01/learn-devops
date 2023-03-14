@@ -1,19 +1,48 @@
-
+# Run Nginx on local 
 
 HIGH LEVEL OBJECTIVES 
 - Running nginx on local using docker run
 - Exploring the config file /etc/nginx/conf.d/default.conf
 - Exploring the file /usr/share/nginx/html index.html and 50x.html
+- Copy the files to local directory
 
 ### Running nginx using docker and access on port 80 of host
 
 ```bash
-$ docker run -it --rm -d -p 8080:80 --name web nginx
+❯ docker run -it --rm -d -p 8080:80 --name nginx nginx
+92268273c3173345ac4a00a480cc05971de55bd5280b85b03e0968af4e600e9e
 
-
+❯ docker ps -a                                        
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                  NAMES
+92268273c317   nginx     "/docker-entrypoint.…"   22 seconds ago   Up 21 seconds   0.0.0.0:8080->80/tcp   nginx
 ```
 
-Accessing on [http://localhost/](http://localhost/)
+Accessing on [http://localhost:8080](http://localhost:8080)
 
+```bash
+❯ curl -s -o /dev/null localhost:8080 -I -w "%{http_code}"
+200
+```
 
-#
+## Exploring the files
+
+```bash
+❯ docker exec -it nginx bash
+root@92268273c317:/# ls /etc/nginx/conf.d/
+default.conf
+root@92268273c317:/# ls /usr/share/nginx/html
+50x.html  index.html
+root@92268273c317:/# exit
+❯ 
+```
+
+## Copy the files to local
+
+```bash
+❯  docker cp nginx:/usr/share/nginx/html/50x.html 50x.html
+❯ docker cp nginx:/usr/share/nginx/html/index.html index.html 
+❯ docker cp nginx:/etc/nginx/conf.d/default.conf default.conf 
+❯ ls
+50x.html     ReadMe.md    default.conf index.html
+```
+
