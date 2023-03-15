@@ -1,6 +1,6 @@
 <?php
 // Define the header row of the table
-$header_row = "| S.No | Stack | Tasks | High Level Objective |\n|------|-------|-------|----------------------|";
+$header_row = "| Tasks |Skills  | High Level Objective |\n|-------|-------|----------------------|";
 
 // Initialize an empty array to store the rows of the table
 $rows = array();
@@ -15,20 +15,21 @@ foreach (glob("task-*") as $task_folder) {
     if (preg_match($pattern_for_objectives, $file_contents, $matches_for_objectives)) {
         # var_dump($matches_for_objectives);
         echo "\nfound obj";
-        $lines_between_pattern_for_objectivess = explode("\n", $matches_for_objectives[1]);
+        $lines_between_pattern_for_objectives = explode("\n", $matches_for_objectives[1]);
         // Store the high level objectives as a list item
-        $high_level_objective = implode("<br>", $lines_between_pattern_for_objectivess);
+        $high_level_objective = trim(implode("<br>", $lines_between_pattern_for_objectives),"<br>");
+//         print_r(trim($high_level_objective,"<br>"));
     } else {
         echo "\nNo matches found.";
     }
-    // print_r($lines_between_pattern_for_objectivess);
+    // print_r($lines_between_pattern_for_objectives);
     // Extract Keywords using a regular expression
     $patter_for_keywords= '/\*\*Skills\*\*(.*?)\*\*Version Stack\*\*/s';
     if (preg_match($patter_for_keywords, $file_contents, $matches_for_keywords)) {
         # var_dump($matches_for_objectives);
         echo "found keywords";
         $lines_between_pattern_for_keywords = explode("\n", $matches_for_keywords[1]);
-        $keywords = implode("<br>", $lines_between_pattern_for_keywords);
+        $keywords = trim(implode("<br>", $lines_between_pattern_for_keywords),"<br>");
     } else {
         echo "No matches found.";
     }    
@@ -38,7 +39,7 @@ foreach (glob("task-*") as $task_folder) {
     $task_name = basename($task_folder);
 
     // Create a row of the table
-    $row = "| ? | $keywords | [$task_name]($task_folder) | $high_level_objective |";
+    $row = "| [$task_name]($task_folder) | $keywords  | $high_level_objective |";
 
     // Add the row to the array of rows
     array_push($rows, $row);
