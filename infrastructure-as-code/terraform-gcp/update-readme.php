@@ -14,7 +14,8 @@ foreach (glob("task-*") as $task_folder) {
             $line = trim($line);
             $line = str_replace('-', '', $line);
             if (!empty($line)) {
-                $objectives .= ($objectives ? ', ' : '') . $line;
+//                 $objectives .= ($objectives ? ', ' : '') . $line;
+                   $objectives .= ($objectives ? '<br> ' : '') . $line;
             }
         }
     } else {
@@ -29,6 +30,7 @@ foreach (glob("task-*") as $task_folder) {
             $line = trim($line);
             $line = str_replace('-', '', $line);
             if (!empty($line)) {
+//                 $skills .= ($skills ? ', ' : '') . $line;
                 $skills .= ($skills ? '<br> ' : '') . $line;
             }
         }
