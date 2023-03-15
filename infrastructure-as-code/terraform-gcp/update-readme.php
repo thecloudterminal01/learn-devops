@@ -12,11 +12,11 @@ foreach (glob("task-*") as $task_folder) {
         $objectives = '';
         foreach ($matched_lines_between_pattern_for_objectives as $line) {
             $line = trim($line);
-            $line = str_replace('-', '', $line);
+            $line = str_replace('- ', '<li>', $line);
             if (!empty($line)) {
-                $line = '`'.$line.'`';
-                $objectives .= ($objectives ? ', ' : '') . $line;
-//                    $objectives .= ($objectives ? '<br> ' : '') . $line;
+//                 $line = '`'.$line.'`';
+//                 $objectives .= ($objectives ? ', ' : '') . $line;
+                $objectives .= ($objectives ? '<br> ' : '') . $line;
             }
         }
     } else {
