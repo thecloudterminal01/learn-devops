@@ -10,11 +10,12 @@
 - Create a Cloud Storage backend.
 - Refresh your Terraform state.
 
-**Keywords**
+**Skills**
 
 - local backend
 - cloud storage backend
 - terraform state
+- terraform
 
 **Version Stack**
 

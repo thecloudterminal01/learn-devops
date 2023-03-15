@@ -11,12 +11,13 @@
 - Create explicit resource dependency
 - View Dependency Graph
 
-**Keywords**
+**Skills**
 
 - variables
 - output values
 - explicit resource dependency
 - dependency graph
+- terraform
 
 **Version Stack**
 

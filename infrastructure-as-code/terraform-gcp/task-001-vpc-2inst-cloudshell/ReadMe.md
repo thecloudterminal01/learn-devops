@@ -6,17 +6,18 @@
 - Attached Internet Gateway 
 - Instances in 2 regions with subnets created using auto-mode
 
-**Keywords**
+**Skills**
 - VPC
 - Internet Gateway
-- 2 instances
+- instances
 - subnets using auto-mode
+- terraform
 
 **Version Stack**
 
-| Stack     | Version  |
-|-----------|----------|
-| Terraform | 1.3.4    |
+| Stack     | Version |
+|-----------|---------|
+| Terraform | 1.3.4   |
 
 
 ![infra-diagram.png](.images/infra-diagram.png)

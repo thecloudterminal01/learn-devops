@@ -12,10 +12,11 @@
 - Define Google Cloud as the provider
 - Create, change, and destroy Google Cloud resources by using Terraform
 
-**Keywords**
+**Skills**
 - terraform version
 - Provider
 - create,change,destroy
+- terraform
 
 **Version Stack**
 

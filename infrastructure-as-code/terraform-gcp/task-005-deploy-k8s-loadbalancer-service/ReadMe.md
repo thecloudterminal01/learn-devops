@@ -9,10 +9,11 @@
 
 - Deploy a Kubernetes cluster along with a service using Terraform
 
-**Keywords**
+**Skills**
 
 - Kubernetes cluster
 - Service
+- terraform
 
 **Version Stack**
 

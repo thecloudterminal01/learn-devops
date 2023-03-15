@@ -11,18 +11,34 @@ foreach (glob("task-*") as $task_folder) {
     $file_contents = file_get_contents("$task_folder/ReadMe.md");
 
     // Extract the high level objectives using a regular expression
-    $pattern = '/\*\*High Level Objectives\*\*(.*?)\*\*Keywords\*\*/s';
-    preg_match($pattern, $file_contents, $matches);
-    $lines_between_patterns = explode("\n", $matches[1]);
+    $pattern_for_objectives = '/\*\*High Level Objectives\*\*(.*?)\*\*Skills\*\*/s';
+    if (preg_match($pattern_for_objectives, $file_contents, $matches_for_objectives)) {
+        # var_dump($matches_for_objectives);
+        echo "\nfound obj";
+        $lines_between_pattern_for_objectivess = explode("\n", $matches_for_objectives[1]);
+        // Store the high level objectives as a list item
+        $high_level_objective = implode("<br>", $lines_between_pattern_for_objectivess);
+    } else {
+        echo "\nNo matches found.";
+    }
+    // print_r($lines_between_pattern_for_objectivess);
+    // Extract Keywords using a regular expression
+    $patter_for_keywords= '/\*\*Skills\*\*(.*?)\*\*Version Stack\*\*/s';
+    if (preg_match($patter_for_keywords, $file_contents, $matches_for_keywords)) {
+        # var_dump($matches_for_objectives);
+        echo "found keywords";
+        $lines_between_pattern_for_keywords = explode("\n", $matches_for_keywords[1]);
+        $keywords = implode("<br>", $lines_between_pattern_for_keywords);
+    } else {
+        echo "No matches found.";
+    }    
 
-    // Store the high level objectives as a list item
-    $high_level_objective = implode("<br>", $lines_between_patterns);
 
     // Get the task name from the folder name
     $task_name = basename($task_folder);
 
     // Create a row of the table
-    $row = "| ? | ? | [$task_name]($task_folder) | $high_level_objective |";
+    $row = "| ? | $keywords | [$task_name]($task_folder) | $high_level_objective |";
 
     // Add the row to the array of rows
     array_push($rows, $row);
@@ -34,5 +50,9 @@ $table = $header_row . "\n" . implode("\n", $rows);
 // Print the table
 echo $table;
 file_put_contents("ReadMe.md", $table);
+
+# https://github.com/nvuillam/markdown-table-formatter
+# npm install markdown-table-formatter -g
+exec('markdown-table-formatter');
 
 ?>

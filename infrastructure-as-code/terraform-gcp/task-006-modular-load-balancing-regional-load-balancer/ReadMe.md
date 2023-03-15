@@ -5,10 +5,10 @@
 [Select - Quest -  Managing Cloud Infrastructure with Terraform](https://www.cloudskillsboost.google/paths)
 
 **High Level Objectives**
--
+- here this is it
 
-**Keywords**
--
+**Skills**
+- here
 
 **Version Stack**
 
