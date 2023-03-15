@@ -29,10 +29,10 @@ Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 
 
 
-## cloud
-### gcp
+# cloud
+## gcp
 
-## containers
+# containers
 
-## infrastructure-as-code
-### terraform-gcp
+# infrastructure-as-code
+## terraform-gcp
