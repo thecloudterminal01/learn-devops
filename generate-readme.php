@@ -10,7 +10,7 @@ function createTree($dir, $depth = 0) {
         $dirName = basename($d);
 
         // Exclude directories that match the pattern task-*
-        if (preg_match('/^task-/', $dirName)) {
+        if (preg_match('/^task/', $dirName)) {
             continue;
         }
 

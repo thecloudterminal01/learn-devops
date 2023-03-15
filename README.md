@@ -4,6 +4,5 @@
 - [containers](#containers)
 - [infrastructure-as-code](#infrastructure-as-code)
   - [terraform-gcp](#terraform-gcp)
-    - [taskset](#taskset)
 - [web-servers](#web-servers)
   - [nginx](#nginx)
