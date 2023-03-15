@@ -41,7 +41,7 @@ foreach (glob("taskset/task-*") as $task_folder) {
     }
 
     $task_name = basename($task_folder);
-    $task_name = substr($task_name, 0, 8);
+    $task_name = substr($task_name, 5, 3);
 
     $row = "| [$task_name]($task_folder) | $skills | $objectives |";
     array_push($rows, $row);
