@@ -14,8 +14,9 @@ foreach (glob("task-*") as $task_folder) {
             $line = trim($line);
             $line = str_replace('-', '', $line);
             if (!empty($line)) {
-//                 $objectives .= ($objectives ? ', ' : '') . $line;
-                   $objectives .= ($objectives ? '<br> ' : '') . $line;
+                $line = '`'.$line.'`';
+                $objectives .= ($objectives ? ', ' : '') . $line;
+//                    $objectives .= ($objectives ? '<br> ' : '') . $line;
             }
         }
     } else {
