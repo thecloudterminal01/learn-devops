@@ -3,7 +3,7 @@
 $header_row = "| Tasks | Skills | High Level Objective |\n|-------|--------|----------------------|";
 $rows = array();
 
-foreach (glob("task-*") as $task_folder) {
+foreach (glob("taskset/task-*") as $task_folder) {
     $file_contents = file_get_contents("$task_folder/ReadMe.md");
 
     $pattern_for_objectives = '/\*\*High Level Objectives\*\*(.*?)\*\*Skills\*\*/s';
