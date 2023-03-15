@@ -31,6 +31,15 @@ $tree = createTree("home");
 
 $content = "# Home\n$tree";
 
-file_put_contents("README.md", $content);
+// file_put_contents("README.md", $content);
+// echo $content;
 
-echo "Done!\n";
+
+$stringArray = explode("<br>", $content);
+
+foreach($stringArray as $line) {
+    $line=str_replace(' ', '-', $line);
+    echo $line;
+}
+
+// echo "Done!\n";
