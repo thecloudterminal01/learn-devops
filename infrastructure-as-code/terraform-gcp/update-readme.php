@@ -15,14 +15,25 @@ foreach (glob("task-*") as $task_folder) {
     if (preg_match($pattern_for_objectives, $file_contents, $matches_for_objectives)) {
         # var_dump($matches_for_objectives);
         echo "\nfound obj";
-        $lines_between_pattern_for_objectives = explode("\n", $matches_for_objectives[1]);
+        $matched_lines_between_pattern_for_objectives = explode("\n", $matches_for_objectives[1]);
         // Store the high level objectives as a list item
-        $high_level_objective = trim(implode("<br>", $lines_between_pattern_for_objectives),"<br>");
+//         print_r($matched_lines_between_pattern_for_objectives);
+        $objectives = '';
+        foreach ($matched_lines_between_pattern_for_objectives as $line) {
+            $line = trim($line);
+            $line = str_replace('- ', '', $line);
+            if (!empty($line)) {
+                // Add the line to the objectives string with a comma separator
+                $objectives .= ($objectives ? ', ' : '') . $line;
+            }
+        }
+        print($objectives);
+//         $high_level_objective = trim(implode("<br>", $matched_lines_between_pattern_for_objectives),"<br>");
 //         print_r(trim($high_level_objective,"<br>"));
     } else {
         echo "\nNo matches found.";
     }
-    // print_r($lines_between_pattern_for_objectives);
+    // print_r($matched_lines_between_pattern_for_objectives);
     // Extract Keywords using a regular expression
     $patter_for_keywords= '/\*\*Skills\*\*(.*?)\*\*Version Stack\*\*/s';
     if (preg_match($patter_for_keywords, $file_contents, $matches_for_keywords)) {
@@ -39,7 +50,7 @@ foreach (glob("task-*") as $task_folder) {
     $task_name = basename($task_folder);
 
     // Create a row of the table
-    $row = "| [$task_name]($task_folder) | $keywords  | $high_level_objective |";
+    $row = "| [$task_name]($task_folder) | $keywords  | $objectives |";
 
     // Add the row to the array of rows
     array_push($rows, $row);
