@@ -1,7 +1,7 @@
 <?php
 
-function createTree($dir) {
-    $tree = "<ul>\n";
+function createTree($dir, $depth = 0) {
+    $tree = "";
 
     $dirs = array_filter(glob($dir . '/*'), 'is_dir');
     sort($dirs);
@@ -14,18 +14,15 @@ function createTree($dir) {
             continue;
         }
 
-        $link = strtolower($dirName);
+        $link = str_replace(' ', '-', strtolower($dirName));
+        $indent = str_repeat('  ', $depth);
 
-        $tree .= "<li><a href=\"#$link\">$dirName</a>";
+        $tree .= "$indent- [$dirName](#$link)\n";
 
         if (!empty(glob("$d/*"))) {
-            $tree .= createTree($d);
+            $tree .= createTree($d, $depth + 1);
         }
-
-        $tree .= "</li>\n";
     }
-
-    $tree .= "</ul>\n";
 
     return $tree;
 }
