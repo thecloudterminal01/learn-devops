@@ -35,6 +35,9 @@ function createTable($taskCount, $link) {
 }
 
 
+
+
+
 $tree = createTree("home");
 
 $content = "- [home](#home)\n$tree";
@@ -67,19 +70,19 @@ foreach($stringArray as $line) {
             $body = $body."\n".str_repeat('#', $hashes) . ' ' . $title;
 
             exec("find . -name $title", $output);
+            // $dirName = "$title";
+            // $matchingDirectories = findDirectory($title);
+            // print_r($matchingDirectories);
+            print_r($output);
 
+            # Assuming only one folder exists with the name
+            // print($output[0]);
             // Print the output
             foreach ($output as $line) {
                 echo $line . PHP_EOL;
-
-                // $directory = '/path/to/directory';
-                // $folder = 'foldername';
-
-                // if (is_dir($directory . '/' . $folder)) {
-                //     echo 'The folder ' . $folder . ' exists in the directory ' . $directory;
-                // } else {
-                //     echo 'The folder ' . $folder . ' does not exist in the directory ' . $directory;
-                // }
+                $argu= $line . PHP_EOL;
+                exec("(ls -ltrh $argu | egrep task | wc -l)",$outputIsTaskFolderExist);
+                
             }
 
             
