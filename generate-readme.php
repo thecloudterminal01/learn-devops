@@ -27,6 +27,14 @@ function createTree($dir, $depth = 0) {
     return $tree;
 }
 
+function createTable($taskCount, $link) {
+    $table = "| No of Tasks |                                            | \n";
+    $table .= "|---------|--------------------------------------------|\n";
+    $table .= sprintf("|%9d|%44s|\n", $taskCount, $link);
+    return $table;
+}
+
+
 $tree = createTree("home");
 
 $content = "- [home](#home)\n$tree";
@@ -39,6 +47,7 @@ $stringArray = explode("\n", $content);
 $body="";
 
 foreach($stringArray as $line) {
+    $output="";
     echo "\n";
     $hyphenCount=0;
     if (empty($line))
@@ -54,8 +63,26 @@ foreach($stringArray as $line) {
 
             $title = substr($parts[1], 0, strpos($parts[1], ']'));
             // echo " Title : $title";
-            echo str_repeat('#', $hashes) . ' ' . $title;
+            // echo str_repeat('#', $hashes) . ' ' . $title;
             $body = $body."\n".str_repeat('#', $hashes) . ' ' . $title;
+
+            exec("find . -name $title", $output);
+
+            // Print the output
+            foreach ($output as $line) {
+                echo $line . PHP_EOL;
+
+                // $directory = '/path/to/directory';
+                // $folder = 'foldername';
+
+                // if (is_dir($directory . '/' . $folder)) {
+                //     echo 'The folder ' . $folder . ' exists in the directory ' . $directory;
+                // } else {
+                //     echo 'The folder ' . $folder . ' does not exist in the directory ' . $directory;
+                // }
+            }
+
+            
         }
         else {
             
@@ -75,6 +102,10 @@ echo "Body is : $body";
 
 $content = $content."\n".$body;
 file_put_contents("README.md", $content);
+
+#markdown-table-formatter
+# npm install markdown-table-formatter -g
+# https://github.com/nvuillam/markdown-table-formatter
 
 
 // echo "Done!\n";
