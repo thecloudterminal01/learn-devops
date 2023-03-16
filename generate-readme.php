@@ -37,27 +37,26 @@ echo $content;
 
 $stringArray = explode("\n", $content);
 
-// print_r($stringArray);
 foreach($stringArray as $line) {
     $hyphenCount=0;
     $line=str_replace(' ', '-', $line);
-//     echo $line;
+    echo "\nLine under consideration $line ";
     $parts = explode('[', $line);
-//     print_r($parts);
-    if (array_key_exists(0,parts) {
-        $hyphenCount = substr_count($parts[0], '-');
-        echo $hyphenCount;
-        if (array_key_exists(1,parts) {
+    if (array_key_exists(0,$parts)) {
+        $hyphenCount=substr_count($parts[0], '-');
+        echo "Hyphencount : $hyphenCount";
+        if (array_key_exists(1,$parts)) {
             $title = substr($parts[1], 0, strpos($parts[1], ']'));
-            echo $title;
+            echo " Title : $title";
         }
         else {
             echo "No part1 found";
         }
     }
     else {
-        echo "No part0 found"
+        echo "No part0 found";
     }
+    
 
 
 
