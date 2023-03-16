@@ -43,10 +43,24 @@ foreach($stringArray as $line) {
     $line=str_replace(' ', '-', $line);
 //     echo $line;
     $parts = explode('[', $line);
-    print_r($parts[0]);
-    $hyphenCount = substr_count($parts[0], '-');
-    echo $hyphenCount;
-//     $title = substr($parts[1], 0, strpos($parts[1], ']'));
+//     print_r($parts);
+    if (array_key_exists(0,parts) {
+        $hyphenCount = substr_count($parts[0], '-');
+        echo $hyphenCount;
+        if (array_key_exists(1,parts) {
+            $title = substr($parts[1], 0, strpos($parts[1], ']'));
+            echo $title;
+        }
+        else {
+            echo "No part1 found";
+        }
+    }
+    else {
+        echo "No part0 found"
+    }
+
+
+
 //     echo str_repeat('#', $hyphenCount / 2) . ' ' . $title;
 }
 
