@@ -74,19 +74,20 @@ foreach($stringArray as $line) {
             // $dirName = "$title";
             // $matchingDirectories = findDirectory($title);
             // print_r($matchingDirectories);
-            print_r($output);
+            // print_r($output);
 
             # Assuming only one folder exists with the name
             // print($output[0]);
             // Print the output
             foreach ($output as $line) {
-                echo $line . PHP_EOL;
-                $argu= $line . PHP_EOL;
+                // echo $line . PHP_EOL;
                 exec("(ls -ltrh $line | egrep task | wc -l)",$outputIsTaskFolderExist);
-                print_r($outputIsTaskFolderExist);
+                // print($outputIsTaskFolderExist[0]);
+                $table=createTable($outputIsTaskFolderExist[0],$line);
+                // echo $table;
             }
 
-            
+            $body = $body."\n".$table;
         }
         else {
             
