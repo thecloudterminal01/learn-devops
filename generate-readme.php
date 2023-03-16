@@ -51,6 +51,7 @@ $body="";
 
 foreach($stringArray as $line) {
     $output="";
+    $outputIsTaskFolderExist="";
     echo "\n";
     $hyphenCount=0;
     if (empty($line))
@@ -81,8 +82,8 @@ foreach($stringArray as $line) {
             foreach ($output as $line) {
                 echo $line . PHP_EOL;
                 $argu= $line . PHP_EOL;
-                exec("(ls -ltrh $argu | egrep task | wc -l)",$outputIsTaskFolderExist);
-                
+                exec("(ls -ltrh $line | egrep task | wc -l)",$outputIsTaskFolderExist);
+                print_r($outputIsTaskFolderExist);
             }
 
             
