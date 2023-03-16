@@ -15,7 +15,7 @@ function createTree($dir, $depth = 0) {
         }
 
         $link = str_replace(' ', '-', strtolower($dirName));
-        $indent = str_repeat('  ', $depth);
+        $indent = str_repeat('  ', $depth+1);
 
         $tree .= "$indent- [$dirName](#$link)\n";
 
@@ -29,17 +29,25 @@ function createTree($dir, $depth = 0) {
 
 $tree = createTree("home");
 
-$content = "# Home\n$tree";
+$content = "- [home](#home)\n$tree";
 
-// file_put_contents("README.md", $content);
-// echo $content;
+file_put_contents("README.md", $content);
+echo $content;
 
 
-$stringArray = explode("<br>", $content);
+$stringArray = explode("\n", $content);
 
+// print_r($stringArray);
 foreach($stringArray as $line) {
+    $hyphenCount=0;
     $line=str_replace(' ', '-', $line);
-    echo $line;
+//     echo $line;
+    $parts = explode('[', $line);
+    print_r($parts[0]);
+    $hyphenCount = substr_count($parts[0], '-');
+    echo $hyphenCount;
+//     $title = substr($parts[1], 0, strpos($parts[1], ']'));
+//     echo str_repeat('#', $hyphenCount / 2) . ' ' . $title;
 }
 
 // echo "Done!\n";
