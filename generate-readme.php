@@ -31,26 +31,35 @@ $tree = createTree("home");
 
 $content = "- [home](#home)\n$tree";
 
-file_put_contents("README.md", $content);
 echo $content;
 
 
 $stringArray = explode("\n", $content);
 
+$body="";
+
 foreach($stringArray as $line) {
+    echo "\n";
     $hyphenCount=0;
+    if (empty($line))
+        continue;
     $line=str_replace(' ', '-', $line);
-    echo "\nLine under consideration $line ";
+    // echo "\nLine under consideration $line ";
     $parts = explode('[', $line);
     if (array_key_exists(0,$parts)) {
         $hyphenCount=substr_count($parts[0], '-');
-        echo "Hyphencount : $hyphenCount";
+        // echo "Hyphencount : $hyphenCount";
         if (array_key_exists(1,$parts)) {
+            $hashes=($hyphenCount)/2;
+
             $title = substr($parts[1], 0, strpos($parts[1], ']'));
-            echo " Title : $title";
+            // echo " Title : $title";
+            echo str_repeat('#', $hashes) . ' ' . $title;
+            $body = $body."\n".str_repeat('#', $hashes) . ' ' . $title;
         }
         else {
-            echo "No part1 found";
+            
+            echo "No part1 found when line is $line";
         }
     }
     else {
@@ -60,7 +69,12 @@ foreach($stringArray as $line) {
 
 
 
-//     echo str_repeat('#', $hyphenCount / 2) . ' ' . $title;
 }
+
+echo "Body is : $body";
+
+$content = $content."\n".$body;
+file_put_contents("README.md", $content);
+
 
 // echo "Done!\n";
