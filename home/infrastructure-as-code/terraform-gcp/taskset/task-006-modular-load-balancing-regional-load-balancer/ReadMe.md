@@ -4,8 +4,13 @@
 
 [Select - Quest -  Managing Cloud Infrastructure with Terraform](https://www.cloudskillsboost.google/paths)
 
+[community/tutorials/modular-load-balancing-with-terraform](https://cloud.google.com/community/tutorials/modular-load-balancing-with-terraform)
+
 **High Level Objectives**
-- here this is it
+- Use load balancing modules for Terraform
+- Create a regional TCP load balancer
+- Create a regional internal TCP load balancer
+- Create a global HTTP load balancer with Kubernetes Engine
 
 **Skills**
 - here

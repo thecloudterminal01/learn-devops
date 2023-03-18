@@ -1,9 +1,26 @@
 # Run Nginx on local 
 
-HIGH LEVEL OBJECTIVES 
+- [docs.docker.com/samples/nginx](https://docs.docker.com/samples/nginx)
+- [docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-docker](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-docker)
+- [hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
+
+**High Level Objectives**
 - Running nginx on local using docker run
 - Exploring files /etc/nginx/conf.d/default.conf,/usr/share/nginx/html index.html and 50x.html
 - Copy the files to local directory
+
+**Skills**
+- nginx
+- docker
+- default.conf
+
+
+**Version Stack**
+
+| Stack | Version      |
+|-------|--------------|
+| nginx | nginx/1.23.2 |
+
 
 ### Running nginx using docker and access on port 80 of host
 
