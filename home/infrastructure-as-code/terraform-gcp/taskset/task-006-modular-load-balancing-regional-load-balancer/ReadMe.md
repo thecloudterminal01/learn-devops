@@ -109,6 +109,8 @@ When you create a service account, you can assign it specific roles and permissi
 
 ![img.png](.images/load-balancers.png)
 
+![img.png](.images/basic-load-balancer-default.png)
+
 
 - Firewall Rules
   - In Google Cloud Platform (GCP), firewall rules are used to control network traffic to and from virtual machine instances. 
