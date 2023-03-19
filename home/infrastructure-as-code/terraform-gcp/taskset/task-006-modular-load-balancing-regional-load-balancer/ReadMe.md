@@ -8,9 +8,9 @@
 
 **High Level Objectives**
 - Use load balancing modules for Terraform
-- Create a regional TCP load balancer
-- Create a regional internal TCP load balancer
-- Create a global HTTP load balancer with Kubernetes Engine
+- Create a regional TCP load balancer (Network and Target Pool based)
+- 
+
 
 **Skills**
 - here
@@ -110,6 +110,8 @@ When you create a service account, you can assign it specific roles and permissi
 ![img.png](.images/load-balancers.png)
 
 ![img.png](.images/basic-load-balancer-default.png)
+
+![img.png](.images/app-with--basic-load-balancer-default.png)
 
 
 - Firewall Rules
