@@ -1,4 +1,4 @@
-# Modular Load Balancing with Terraform - Regional Load Bala
+# Modular Load Balancing with Terraform - Regional Load Balancer
 
 [https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
 
