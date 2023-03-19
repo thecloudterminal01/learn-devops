@@ -64,6 +64,9 @@ echo "http://${EXTERNAL_IP}"
   - A service account in GCP is a special type of Google account that is used to authenticate applications, services, and virtual machines 
     (VMs) running on GCP. 
   - Service accounts are designed to be used by applications and services instead of human users.
+  - When you create a service account, you can assign it specific roles and permissions that determine what resources it can access and what actions it can perform. Service accounts    can   be used to authorize API requests, access reso
+
+![img.png](.images/service-account.png)
 
 - VCP Networks
 
@@ -86,8 +89,7 @@ echo "http://${EXTERNAL_IP}"
 ![img.png](.images/cloud-nat-details.png)
 
 
-When you create a service account, you can assign it specific roles and permissions that determine what resources it can access and what actions it can perform. Service accounts can be used to authorize API requests, access reso
-![img.png](.images/service-account.png)
+
 
 - Managed Instnace Group
   - In Google Cloud Platform (GCP), a Managed Instance Group (MIG) is a scalable, flexible, and highly available service 
@@ -131,7 +133,7 @@ When you create a service account, you can assign it specific roles and permissi
   - They act as a barrier between your instances and the internet or other networks, allowing you to specify what kind of traffic is allowed or blocked.
 ![img.png](.images/firewall-rules.png)
 
-![img.png](.images/basic-load-balancer-default-hc.png)
+![img.png](.images/basic-load-balancer-default-hc-firewall-rule.png)
 
 - Health checks
   - Health checks in GCP are used to monitor the health and availability of instances or endpoints.
@@ -147,7 +149,6 @@ When you create a service account, you can assign it specific roles and permissi
 
 ![img.png](.images/basic-load-balancer-custom-hc-hc.png)
 
-![img.png](.images/basic-load-balancer-default-hc.png)
 
 
 - Target Pools
