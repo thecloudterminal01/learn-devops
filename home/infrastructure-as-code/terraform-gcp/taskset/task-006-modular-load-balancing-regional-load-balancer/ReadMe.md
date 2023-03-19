@@ -60,7 +60,7 @@ echo "http://${EXTERNAL_IP}"
 ```
 
 ## Screenshots
-- Service Accounts
+- Service Account
   - A service account in GCP is a special type of Google account that is used to authenticate applications, services, and virtual machines 
     (VMs) running on GCP. 
   - Service accounts are designed to be used by applications and services instead of human users.
