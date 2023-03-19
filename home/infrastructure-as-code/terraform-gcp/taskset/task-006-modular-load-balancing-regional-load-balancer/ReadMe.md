@@ -9,11 +9,23 @@
 **High Level Objectives**
 - Use load balancing modules for Terraform
 - Create a regional TCP load balancer (Network and Target Pool based)
-- 
+- Access the minimal php app on external IP
+- Go through the code
 
 
 **Skills**
-- here
+- VPC Networks
+- Subnetwork
+- Cloud Router
+- Load Balancer
+- Terraform
+- Cloud Nat
+- Managed Instance Group
+- Instance Templates
+- Firewall Rules
+- Health Checks
+- Forwarding Rules
+- Target Pools
 
 **Version Stack**
 
@@ -77,7 +89,7 @@ echo "http://${EXTERNAL_IP}"
 When you create a service account, you can assign it specific roles and permissions that determine what resources it can access and what actions it can perform. Service accounts can be used to authorize API requests, access reso
 ![img.png](.images/service-account.png)
 
-- Managed Insstace Group
+- Managed Instnace Group
   - In Google Cloud Platform (GCP), a Managed Instance Group (MIG) is a scalable, flexible, and highly available service 
     for managing groups of virtual machine (VM) instances. MIGs provide the ability to automatically manage and distribute traffic 
     to a group of homogeneous instances based on the policies and parameters that you define. 
