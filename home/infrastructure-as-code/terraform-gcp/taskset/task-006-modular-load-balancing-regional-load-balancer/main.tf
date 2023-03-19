@@ -13,6 +13,9 @@ It also defines the target pool, which is a group of backend instances that the 
 The "google_compute_forwarding_rule" resource creates a forwarding rule to route traffic to the target pool. 
 It specifies the provider, project, name, target, load balancing scheme, port range, region, IP address, IP protocol, and labels.
 
+Forwarding rule has an associated target pool
+
+
 Created for 
 - basic-load_balancer_default
 - basic-load_balancer_custom_hc
@@ -33,8 +36,13 @@ resource "google_compute_forwarding_rule" "default" {
 }
 
 /*
+In Google Cloud Platform (GCP), a target pool is a group of virtual machine (VM) instances or internet protocol (IP) addresses that 
+receive incoming traffic from a Google Cloud load balancer. The target pool defines the set of virtual machines or IP addresses 
+that should receive traffic, and the load balancer routes traffic to the instances in the pool based on the load balancing algorithm configured for the load balancer.
+
 The "google_compute_target_pool" resource creates a target pool to distribute traffic across instances. 
 It specifies the project, name, region, and session affinity.
+
 The "health_checks" attribute is set to an empty list if "var.disable_health_check" is true, otherwise it includes a reference to the HTTP health check resource
 
 Created for
@@ -62,6 +70,13 @@ The count parameter is used to conditionally create the resource depending on th
 If disable_health_check is set to true, the health check resource will not be created.
 
 Health check is used by a Target Pool
+
+Created for 
+- basic-load_balancer_default
+- basic-load_balancer_custom_hc
+
+Not created for
+- basic-load_balancer_no_hc
 */
 resource "google_compute_http_health_check" "default" {
   count   = var.disable_health_check ? 0 : 1
@@ -79,9 +94,18 @@ resource "google_compute_http_health_check" "default" {
 }
 
 /*
+In Google Cloud Platform (GCP), firewall rules are used to control network traffic to and from virtual machine instances. 
+They act as a barrier between your instances and the internet or other networks, allowing you 
+to specify what kind of traffic is allowed or blocked.
+
 The "google_compute_firewall" resources create firewall rules to control network traffic. 
 The first firewall ("default-lb-fw") allows traffic on the specified protocol and port, from the specified source ranges, 
 to instances with the specified target tags and service accounts. 
+
+Created with names 
+- basic-load-balancer-custom-hc-vm-service 
+- basic-load-balancer-default-vm-service
+- basic-load-balancer-no-hc-vm-service
 
 */
 resource "google_compute_firewall" "default-lb-fw" {
@@ -105,6 +129,17 @@ resource "google_compute_firewall" "default-lb-fw" {
 The second firewall ("default-hc-fw") allows TCP traffic on the health check port, from specified source ranges, 
 to instances with the specified target tags and service accounts. 
 The count attribute is used to conditionally create this resource based on whether health checks are disabled or not.
+
+Created with name
+- basic-load-balancer-custom-hc-hc
+- basic-load-balancer-default-hc
+
+Created for 
+- basic-load-balancer-custom-hc
+- basic-load-balancer-default
+
+Not Created for
+- basic-load-balancer-no-hc
 */
 resource "google_compute_firewall" "default-hc-fw" {
   count   = var.disable_health_check ? 0 : 1
