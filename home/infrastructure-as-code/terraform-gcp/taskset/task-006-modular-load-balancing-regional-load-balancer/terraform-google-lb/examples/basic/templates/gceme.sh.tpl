@@ -1,5 +1,7 @@
-# This is a bash script that installs Apache and PHP on a Debian-based Linux machine and sets up a web page that displays the metadata of the
-# Google Cloud instance that the script is running on. The script starts by updating the package list with apt-get update and installs Apache
+# This is a bash script that installs Apache and PHP on a Debian-based Linux machine and sets up a web page that
+# displays the metadata of the
+# Google Cloud instance that the script is running on. The script starts by updating the package list with apt-get
+# update and installs Apache
 # and PHP with apt-get install -y apache2 libapache2-mod-php.
 #
 # The script then uses a here document to write a PHP script to /var/www/html/index.php that displays the metadata of the

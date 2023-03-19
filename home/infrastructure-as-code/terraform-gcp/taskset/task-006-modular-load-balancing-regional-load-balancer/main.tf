@@ -36,18 +36,23 @@ resource "google_compute_forwarding_rule" "default" {
 }
 
 /*
-In Google Cloud Platform (GCP), a target pool is a group of virtual machine (VM) instances or internet protocol (IP) addresses that 
-receive incoming traffic from a Google Cloud load balancer. The target pool defines the set of virtual machines or IP addresses 
-that should receive traffic, and the load balancer routes traffic to the instances in the pool based on the load balancing algorithm configured for the load balancer.
+In Google Cloud Platform (GCP), a target pool is a group of virtual machine (VM) instances or internet protocol 
+(IP) addresses that 
+receive incoming traffic from a Google Cloud load balancer. The target pool defines the set of virtual machines or 
+IP addresses 
+that should receive traffic, and the load balancer routes traffic to the instances in the pool based on the 
+load balancing algorithm configured for the load balancer.
 
 The "google_compute_target_pool" resource creates a target pool to distribute traffic across instances. 
 It specifies the project, name, region, and session affinity.
 
-The "health_checks" attribute is set to an empty list if "var.disable_health_check" is true, otherwise it includes a reference to the HTTP health check resource
+The "health_checks" attribute is set to an empty list if "var.disable_health_check" is true, otherwise 
+it includes a reference to the HTTP health check resource
 
 Created for
 - basic-load-balancer-default: creates healthcheck : basic-load-balancer-default-hc : Path /, port 80
-- basic-load-balancer-custom-hc : creates healthcheck : basic-load-balancer-custom-hc : Host 1.2.3.4 and path is /mypath, port 8080
+- basic-load-balancer-custom-hc : creates healthcheck : basic-load-balancer-custom-hc : Host 1.2.3.4 and path 
+  is /mypath, port 8080
 - basic-load_balancer_no_hc : "health_checks" attribute is set to an empty list : So health check will be set to NONE
 
 Target Pools are associated with healthchecks.
@@ -64,9 +69,11 @@ resource "google_compute_target_pool" "default" {
 
 /*
 The "google_compute_http_health_check" resource creates an HTTP health check to verify the health of instances. 
-It specifies the project, name, check interval, healthy threshold, timeout, unhealthy threshold, port, request path, and host.
+It specifies the project, name, check interval, healthy threshold, timeout, unhealthy threshold, port, request path, 
+and host.
 
-The count parameter is used to conditionally create the resource depending on the value of the disable_health_check variable. 
+The count parameter is used to conditionally create the resource depending on the value of the disable_health_check 
+variable. 
 If disable_health_check is set to true, the health check resource will not be created.
 
 Health check is used by a Target Pool
