@@ -15,8 +15,7 @@ provider "google-beta" {
 }
 
 /*
-This block specifies the Random provider with a version constraint of ~> 2.2, which means
-that any version of the random provider between 2.2 and 2.99 will be used if available.
+This block specifies the Random provider with a version constraint of ~> 2.2
 The random provider allows Terraform to generate random values during resource creation,
 which can be useful for testing and creating unique resource names.
 */
@@ -27,9 +26,6 @@ provider "random" {
 /*
 This block defines a Terraform resource of type random_id with the name name.
 This resource is used to generate a random identifier value that can be used in other resources or modules.
-
-Once this resource is created, the random identifier value can be accessed using the following syntax:
-                ${random_id.name.hex}
 */
 resource "random_id" "name" {
   byte_length = 2
@@ -60,11 +56,7 @@ resource "google_sql_database_instance" "master" {
     authorized_gae_applications = var.authorized_gae_applications
     disk_autoresize             = var.disk_autoresize
 
-    /*
-    The dynamic blocks inside the settings block are used to handle configurations that
-    can have multiple instances. For example, backup_configuration can have multiple instances
-    of different configurations, so it is specified as a dynamic block.
-    */
+
     dynamic "backup_configuration" {
       for_each = [var.backup_configuration]
       content {
@@ -100,6 +92,11 @@ resource "google_sql_database_instance" "master" {
         zone                   = lookup(location_preference.value, "zone", null)
       }
     }
+    /*
+      The dynamic blocks inside the settings block are used to handle configurations that
+      can have multiple instances. For example, maintenance_window can have multiple instances
+      of different configurations, so it is specified as a dynamic block.
+    */
     dynamic "maintenance_window" {
       for_each = [var.maintenance_window]
       content {
