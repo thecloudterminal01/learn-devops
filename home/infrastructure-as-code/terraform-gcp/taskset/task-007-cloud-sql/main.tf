@@ -53,7 +53,6 @@ resource "google_sql_database_instance" "master" {
   settings {
     tier                        = var.tier
     activation_policy           = var.activation_policy
-    authorized_gae_applications = var.authorized_gae_applications
     disk_autoresize             = var.disk_autoresize
 
 
@@ -109,7 +108,6 @@ resource "google_sql_database_instance" "master" {
     disk_size        = var.disk_size
     disk_type        = var.disk_type
     pricing_plan     = var.pricing_plan
-    replication_type = var.replication_type
     availability_type = var.availability_type
   }
 
