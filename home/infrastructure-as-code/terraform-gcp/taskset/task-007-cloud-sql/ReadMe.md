@@ -7,11 +7,17 @@
 
 
 **High Level Objectives**
-- 
+- Understand the code
+- Run Terraform
+- Install Cloud SQL Proxy
+- Test connection to the database
+
 
 
 **Skills**
-- 
+- terraform
+- cloud sql
+- cloud sql proxy
 
 
 **Version Stack**
