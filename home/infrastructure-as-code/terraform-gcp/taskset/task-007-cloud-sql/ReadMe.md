@@ -24,7 +24,7 @@
 
 | Stack     | Version |
 |-----------|---------|
-| Terraform | 1.3.9   |
+| Terraform | v1.4.1  |
 
 
 ## Download necessary files
