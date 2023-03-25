@@ -46,7 +46,7 @@ resource "google_sql_database_instance" "master" {
 
   /*
   The settings block includes various configurations for the database instance,
-  such as tier, activation_policy, authorized_gae_applications, disk_autoresize, backup_configuration,
+  such as tier, activation_policy, disk_autoresize, backup_configuration,
   ip_configuration, location_preference, maintenance_window, disk_size, disk_type, pricing_plan,
   replication_type, and availability_type. The values for these configurations are provided in the variables.
   */
