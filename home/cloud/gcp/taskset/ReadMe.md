@@ -25,7 +25,8 @@
 - [task-023 : anthos service mesh walkthrough](task-023-anthos-service-mesh-walkthrough)
 - [task-024 : observing anthos services](task-024-observing-anthos-services)
 - [task-025 : managing traffic with anthos service mesh](task-025-managing-traffic-with-anthos-service-mesh)
-
+- [task-026 : securing traffic through anthos service mesh](task-026-securing-traffic-through-anthos-service-mesh)
+- [task-027 : cloud source repositories overview](task-027-cloud-source-repositories-overview)
 
 
 
