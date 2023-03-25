@@ -176,7 +176,8 @@ resource "random_id" "user-password" {
 This is a Terraform configuration code that creates a SQL user in a Google Cloud SQL instance.
 */
 resource "google_sql_user" "default" {
-  // This line uses a conditional operator to set the count of the resource to 1 if the master_instance_name variable is empty, or 0 if it is not.
+  // This line uses a conditional operator to set the count of the resource to 1 if the
+  // master_instance_name variable is empty, or 0 if it is not.
   count    = var.master_instance_name == "" ? 1 : 0
   // This sets the name of the SQL user to the value of the user_name variable.
   name     = var.user_name
@@ -185,7 +186,8 @@ resource "google_sql_user" "default" {
   instance = google_sql_database_instance.master.name
   // This sets the host where the SQL user can connect from.
   host     = var.user_host
-  // This sets the password for the SQL user. If the user_password variable is not set, a random password is generated using the random_id resource.
+  // This sets the password for the SQL user. If the user_password variable is not set, a random password is generated using
+  // the random_id resource.
   // Otherwise, the user_password variable value is used.
   password = var.user_password == "" ? random_id.user-password.hex : var.user_password
 }
