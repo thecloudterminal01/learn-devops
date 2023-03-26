@@ -1,5 +1,28 @@
 # Getting started with GKE
 
+[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
+
+[Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
+
+**High Level Objectives**
+- Check if required APIs are enabled
+- Start a Kubernetes Engine Cluster 
+- Run and deploy nginx container
+- Expose deployment via LB
+- Validate the changes by going to the external IP created.
+
+
+
+**Skills**
+- gcp
+- gke
+- kubernetes
+- container
+- nginx
+- loadbalancer
+- cloudshell
+- external ip
+
 
 ## Check if the APIs are enabled
 
