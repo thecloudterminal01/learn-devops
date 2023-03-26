@@ -6,8 +6,7 @@
 
 [Select - Cloud Operations and Service Mesh with Anthos Course](https://www.cloudskillsboost.google)
 
-High Level Objectives
-
+**High Level Objectives**
 - Configure and use Istio Gateways
 - Apply default destination rules, for all available versions
 - Apply virtual services to route by default to only one version
@@ -16,6 +15,19 @@ High Level Objectives
 - Use the Anthos Service Mesh dashboard to view routing to multiple versions
 - Setup networking best practices such as retries, circuit breakers and timeouts
 
+**Skills**
+- gcp
+- gke
+- kubernetes
+- istio
+- service mesh
+- anthos
+- destination rules
+- virtual services
+- traffic management
+- retries
+- circuit breakers
+- timeouts
 
 Anthos Service Mesh’s traffic management model relies on the following two components:
 - Control plane: manages and configures the Envoy proxies to route traffic and enforce polices.
