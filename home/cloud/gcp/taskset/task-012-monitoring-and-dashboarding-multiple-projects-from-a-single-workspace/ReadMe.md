@@ -4,12 +4,20 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Configure Resource Projects
 - Create a Monitoring Workspace and link the two worker projects into it
 - Create and configure Monitoring groups
 - Create and test an uptime check
+
+
+**Skills**
+- gcp
+- monitoring
+- dashboarding
+- multiple projects
+- monitoring groups
+- uptime check
 
 
 We need to have 3 different Projects.
