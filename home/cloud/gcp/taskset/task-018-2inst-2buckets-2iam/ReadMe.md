@@ -4,14 +4,22 @@
 
 [Select - Getting Started with Google Kubernetes Engine Course](https://www.cloudskillsboost.google)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Learn how to access the Cloud Console and Cloud Shell
 - Become familiar with the Cloud Console
 - Become familiar with Cloud Shell features, including the Cloud Shell code editor
 - Use the Cloud Console and Cloud Shell to create buckets and VMs and service accounts
 - Perform other commands in Cloud Shell
 
+**Skills**
+- gcp
+- gcp-console
+- gcp-storage
+- gcp-vm
+- gcp-iam
+- gcp-shell
+- gcp-cli
+- gcp-service-accounts
 
 ### Use the Cloud Console and Cloud Shell to create buckets and VMs and service accounts
 
