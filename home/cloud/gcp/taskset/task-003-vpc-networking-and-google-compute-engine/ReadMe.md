@@ -4,6 +4,23 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
+**High Level Objectives**
+- Explore the default network
+- Delete the firewall rules and default network
+- Create VPC network and VM instances
+- Explore the connectivity for VM instances
+
+
+
+**Skills**
+- gcp
+- gcp-networking
+- gcp-compute-engine
+- gcp-vpc-networking
+- gcp-vm-instance
+- gcp-ssh
+
+
 
 ## Explore the default network
 

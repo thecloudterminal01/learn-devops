@@ -1,5 +1,9 @@
 # Getting Started With Cloud Marketplace
 
+[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
+
+[Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
+
 **High Level Objectives**
 - To launch a LAMP stack from GCP marketplace
 - Validate the changes by going to the public endpoint created
@@ -12,9 +16,7 @@
 
 
 
-[https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
 
-[Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
 > Task :  We will use the Cloud MarketPlace to deploy a LAMP stack
 
