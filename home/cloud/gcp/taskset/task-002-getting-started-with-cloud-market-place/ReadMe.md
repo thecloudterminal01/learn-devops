@@ -1,5 +1,16 @@
 # Getting Started With Cloud Marketplace
 
+**High Level Objectives**
+- To launch a LAMP stack from GCP marketplace
+- Validate the changes by going to the public endpoint created
+
+
+
+**Skills**
+- gcp
+- cloud-marketplace
+
+
 
 [https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
 
