@@ -4,3 +4,7 @@
 venv
 
 tmpdir
+
+
+## All pem files
+*.pem
