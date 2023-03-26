@@ -7,12 +7,24 @@
 
 [haggman/HelloLoggingNodeJS.git](https://github.com/haggman/HelloLoggingNodeJS.git)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Deploy the test nodejs app 
 - Use Service Monitoring to create an availability SLO
 - Create an alert tied to your SLO
 - Trigger the alert
+
+**Skills**
+- gcp
+- nodejs
+- app engine
+- app engine logs
+- alerting
+- service monitoring
+- service level objective
+- error budget
+- error reporting
+- monitoring
+
 
 ### Deploy the test nodejs app
 
