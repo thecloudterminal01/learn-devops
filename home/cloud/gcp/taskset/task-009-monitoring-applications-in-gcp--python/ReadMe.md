@@ -4,14 +4,28 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## Objective
-
+**High Level Objectives**
 - Deploy and test the python app locally on gcp console 
 - Deploy an application to App Engine and examine the Cloud logs
 - View the Profiler Information
 - Explore Cloud Trace
 - Monitor resources using Dashboards
 - Create uptime checks and alerts
+
+**Skills**
+- gcp
+- python
+- docker
+- app engine
+- cloud build
+- cloud profiler
+- cloud trace
+- cloud monitoring
+- cloud logging
+- cloud uptime checks
+- cloud alerting
+- cloud dashboards
+
 
 ### Deploy and test the python app locally on gcp console
 
