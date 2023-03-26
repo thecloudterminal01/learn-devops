@@ -4,13 +4,20 @@
 
 [Select - Getting Started with Google Kubernetes Engine Course](https://www.cloudskillsboost.google)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Confirm that needed APIs are enabled
 - Building containers with DockerFile and Cloud Build
 - Building containers with a build configuration file and Cloud Build
 - Building and testing containers with a build configuration file and Cloud Build
 
+**Skills**
+- gcp
+- cloud-build
+- cloud-shell
+- cloud-shell-editor
+- containers
+- docker
+- dockerfile
 
 ### Confirm that needed APIs are enabled
 
