@@ -4,8 +4,7 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Download a pair of sample apps from GitHub
 - Deploy the converter application to App Engine
 - Debug the application
@@ -13,6 +12,16 @@
 - Fix the bug and deploy a new version
 - Examine an error report coming out of Cloud Run in Error Reporting
 - Examine a default and custom trace span
+
+**Skills**
+- gcp
+- gcp-cloud-run
+- gcp-app-engine
+- debug apps
+- python
+- nodejs
+- custom traces
+- trace span
 
 
 ### Download a pair of sample apps from GitHub
