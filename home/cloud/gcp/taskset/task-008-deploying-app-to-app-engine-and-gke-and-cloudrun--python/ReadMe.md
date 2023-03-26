@@ -14,6 +14,13 @@
 
 **Skills**
 - gcp
+- python
+- docker
+- kubernetes
+- cloud run
+- app engine
+- cloud build
+
 
 ![img.png](.images/arch-objective.png)
 
