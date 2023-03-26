@@ -4,11 +4,18 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Set up a VM and a GKE cluster.
 - Install and use the logging and monitoring agents for Compute Engine.
 - Add a service to the GKE cluster and examine its logs and metrics.
+
+**Skills**
+- gcp
+- vm
+- gke
+- logging agent
+- monitoring agent
+- logs and metrics
 
 
 ### Set up a VM and a GKE cluster
