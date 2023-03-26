@@ -4,8 +4,7 @@
 
 [Select - Cloud Operations and Service Mesh with Anthos Course](https://www.cloudskillsboost.google)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Install Anthos Service Mesh, with tracing enabled and configured to use Cloud Trace as the backend.
 - Deploy Bookinfo, an Istio-enabled multi-service application.
 - Enable external access using an Istio Ingress Gateway.
@@ -14,6 +13,19 @@
 - Create and monitor service-level objectives (SLOs).
 - Leverage the Anthos Service Mesh Dashboard to understand service performance.
 
+**Skills**
+- gcp
+- gke
+- kubernetes
+- istio
+- service mesh
+- anthos
+- SLOs
+- network topology
+- microservices
+- service performance
+- Istio ingress gateway
+- cloud trace
 
 Anthos Service Mesh (ASM) on Google Kubernetes Engine. Anthos Service Mesh is a managed service based on Istio, the leading open source service mesh
 
