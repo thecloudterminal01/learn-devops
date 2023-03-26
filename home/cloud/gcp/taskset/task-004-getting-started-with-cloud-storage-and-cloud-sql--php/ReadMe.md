@@ -4,6 +4,23 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
+**High Level Objectives**
+- Deploy a webserver VM instance
+- Create a Cloud Storage bucket using gsutil command line
+- Create a Cloud SQL instance
+- Configure the application in compute engine instance to use Cloud SQL
+- Configure the application in compute engine instance to use Cloud  Storage Object
+
+
+
+**Skills**
+- gcp
+- cloud storage
+- cloud sql
+- php
+- cloud storage object
+- vm instance
+
 ## Deploy a WebServer VM instance
 
 - Create instance `bloghost` with `Debian GNU/Linux 11 (bullseye)` image and ensure that you allow `http` traffic
