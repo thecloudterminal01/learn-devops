@@ -4,13 +4,21 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Configure a custom network with VPC flow logs
 - Create an Apache web server
 - Verify that network traffic is logged
 - Export the network traffic to BigQuery to further analyze the logs
 - Add VPC flow log aggregation
+
+**Skills**
+- gcp
+- gcp-networking
+- gcp-vpc
+- gcp-vpc-flow-logs
+- gcp-bigquery
+- vpc flow logs aggregation
+- export to bigquery
 
 ### Configure a custom network with VPC flow logs
 
