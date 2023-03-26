@@ -4,7 +4,16 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## Objective
+**High Level Objectives**
+- Create a minimal python app, dockerize the app 
+- Deploy to App Engine 
+- Deploy to Kubernetes Engine 
+- Deploy to Cloud Run
+
+
+
+**Skills**
+- gcp
 
 ![img.png](.images/arch-objective.png)
 
