@@ -5,11 +5,18 @@
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
 
-## High Level Objectives
-
+**High Level Objectives**
 - Enable data access logs on Cloud Storage.
 - Generate admin and data access activity.
 - View Audit logs.
+
+**Skills**
+- gcp
+- gcp-logging
+- access-logs
+- audit-logs
+- cloud-storage
+
 
 ### Enable data access logs on Cloud Storage
 
