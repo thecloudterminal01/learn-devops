@@ -4,6 +4,26 @@
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
+**High Level Objectives**
+- Enable CloudRun API, configure Shell env
+- Write a sample minimal node application
+- Containerize app using CloudBuild
+- Upload to container Registry
+- Deploy the application to CloudRun
+
+
+
+**Skills**
+- gcp
+- cloudrun
+- nodejs
+- docker
+- cloudbuild
+- artifactregistry
+- cloudshell
+- webpreview
+- cloudshelleditor
+
 
 ## Enable the Cloud Run API and configure your Shell environment
 
