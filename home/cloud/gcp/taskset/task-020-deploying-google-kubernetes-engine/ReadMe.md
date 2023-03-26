@@ -4,10 +4,15 @@
 
 [Select - Getting Started with Google Kubernetes Engine Course](https://www.cloudskillsboost.google)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Use the Google Cloud Console to build and manipulate GKE clusters
 - Use the Google Cloud Console to deploy a Pod
+
+**Skills**
+- GKE
+- Kubernetes
+- Pods
+- Modify Cluster
 
 
 ### Deploy GKE clusters

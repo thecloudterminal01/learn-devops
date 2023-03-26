@@ -4,12 +4,22 @@
 
 [Select - Getting Started with Google Kubernetes Engine Course](https://www.cloudskillsboost.google)
 
-## High Level Objectives
-
+**High Level Objectives**
 - Create deployment manifests, deploy to cluster
 - Trigger manual scaling up and down of Pods in deployments
 - Trigger deployment rollout (rolling update to new version) and rollbacks
 - Perform a Canary deployment
+
+**Skills**
+- gcp
+- kubernetes
+- deployments
+- pods
+- scaling
+- rollouts
+- rollbacks
+- canary
+
 
 
 ### Create deployment manifests and deploy to the cluster
