@@ -6,13 +6,21 @@
 
 [Select - Cloud Operations and Service Mesh with Anthos Course](https://www.cloudskillsboost.google)
 
-High Level Objectives
-
+**High Level Objectives**
 - Enforce STRICT mTLS mode across the service mesh
 - Enforce STRICT mTLS mode on a single namespace
 - Explore the security configurations in the Anthos Service Mesh Dashboard
 - Add authorization policies to enforce access based on a JSON Web Token (JWT)
 - Add authorization policies for HTTP traffic in an Istio mesh
+
+**Skills**
+- anthos
+- gcp
+- Strict mTLS
+- authorization policies
+- JWT
+- Istio
+- Service Mesh
 
 ## Confirm Anthos Service Mesh setup
 
