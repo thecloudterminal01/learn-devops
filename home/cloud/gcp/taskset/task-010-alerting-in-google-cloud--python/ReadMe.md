@@ -1,17 +1,25 @@
-# Deploying same Python app to AppEngine, GKE, CloudRun
+# Alerting in Google Cloud - Python App - App Engine
 
 [https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
 
-## Objective
-
+**High Level Objectives**
 - Run the app locally on gcp console
 - Deploy to App Engine
 - Examine the App Engine Logs
 - Create an App Engine latency alert
 - Creating an Alerting Policy with the CLI
 
+
+
+**Skills**
+- gcp
+- python
+- app engine
+- app engine logs
+- alerting
+- alerting policy
 
 
 
