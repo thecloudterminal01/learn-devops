@@ -5,14 +5,20 @@
 [Select - Getting Started with Google Kubernetes Engine Course](https://www.cloudskillsboost.google)
 
 
-## High Level Objectives
-
+**High Level Objectives**
 - Create manifests for PersistentVolumeClaims (PVCs) for Google Cloud persistent disks (dynamically created or existing)
 - Mount Google Cloud persistent disk PVCs as volumes in Pods
 - Use manifests to create StatefulSets
 - Mount Google Cloud persistent disk PVCs as volumes in StatefulSets
 - Verify the connection of Pods in StatefulSets to particular PVs as the Pods are stopped and restarted
 
+**Skills**
+- gcp
+- kubernetes
+- persistent storage
+- persistent volumes
+- persistent volume claims
+- statefulsets
 
 ### Create PVCs
 
