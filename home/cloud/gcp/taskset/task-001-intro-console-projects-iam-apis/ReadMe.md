@@ -1,11 +1,26 @@
 # Get Familiar With Console, Projects, Roles And Permissions, APIs And Services
 
 
-RECOMMENDED TO VISIT
-
 [https://www.cloudskillsboost.google](https://www.cloudskillsboost.google)
 
 [Select - DevOps Engineer, SRE Learning Path](https://www.cloudskillsboost.google/paths)
+
+**High Level Objectives**
+- Searching though available products and services in the GCP console.
+- Accessing projects in console.
+- Accessing roles and permissions in console i.e. Identify and Access Management
+- Enable specific API for any product
+
+
+
+**Skills**
+- gcp
+- gcp-console
+- gcp-projects
+- gcp-iam
+- gcp-apis
+
+
 
 > Task : Searching through the available products and services
 
