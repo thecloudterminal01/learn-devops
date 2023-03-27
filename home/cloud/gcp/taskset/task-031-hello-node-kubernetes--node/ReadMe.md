@@ -55,11 +55,13 @@ CMD node server.js
 - Build and Run
 
 ```bash
+export PROJECT_ID=$(gcloud config get-value project -q)
+
 # Build the image with the following, replacing PROJECT_ID with your Project ID
-docker build -t gcr.io/PROJECT_ID/hello-node:v1 .
+docker build -t gcr.io/$PROJECT_ID/hello-node:v1 .
 
 # Run the following command replacing PROJECT_ID with your Project ID
-docker run -d -p 8080:8080 gcr.io/PROJECT_ID/hello-node:v1
+docker run -d -p 8080:8080 gcr.io/$PROJECT_ID/hello-node:v1
 
 ## Test
 curl http://localhost:8080
@@ -76,14 +78,14 @@ docker stop <container-id>
 ## Run this command, replacing PROJECT_ID with your Project ID,
 
 gcloud auth configure-docker
-docker push gcr.io/PROJECT_ID/hello-node:v1
+docker push gcr.io/$PROJECT_ID/hello-node:v1
 ```
 
 ## Create your cluster
 
 ```bash
 ## Replace PROJECT_ID
-gcloud config set project PROJECT_ID
+gcloud config set project $PROJECT_ID
 
 ## Create a cluster with two n1-standard-1 nodes (this will take a few minutes to complete):
 gcloud container clusters create hello-world \
@@ -100,7 +102,7 @@ gcloud container clusters create hello-world \
 # Create a pod with the kubectl run command
 ## Replace project ID
 kubectl create deployment hello-node \
-    --image=gcr.io/PROJECT_ID/hello-node:v1
+    --image=gcr.io/$PROJECT_ID/hello-node:v1
     
 # Check deployment
 kubectl get deployments
@@ -120,6 +122,9 @@ kubectl expose deployment hello-node --type="LoadBalancer" --port=8080
 
 # Check services
 kubectl get services
+
+# Test application
+curl http://<EXTERNAL-IP>:8080
 ```
 
 
@@ -139,6 +144,7 @@ kubectl get pods
 
 
 State of our cluster
+
 ![img.png](.images/state-of-cluster.png)
 
 
@@ -153,14 +159,16 @@ response.end("Hello Kubernetes World!");
 - Build and push the new image
 
 ```bash
-docker build -t gcr.io/PROJECT_ID/hello-node:v2 .
+docker build -t gcr.io/$PROJECT_ID/hello-node:v2 .
 
-docker push gcr.io/PROJECT_ID/hello-node:v2
+docker push gcr.io/$PROJECT_ID/hello-node:v2
 ```
 
 - Edit the deployment to use the new image
 
 ```bash
+kubectl set image deployment/hello-node hello-node=gcr.io/$PROJECT_ID/hello-node:v2
+# OR
 kubectl edit deployment hello-node
 # change the image to gcr.io/PROJECT_ID/hello-node:v2
 ```
