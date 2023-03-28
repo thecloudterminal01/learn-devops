@@ -15,6 +15,15 @@
 
 **Skills**
 - gcp
+- kubernetes
+- docker
+- nodejs
+- pods
+- deployments
+- services
+- scaling
+- load balancing
+
 
 
 how the pieces fit together with one another
